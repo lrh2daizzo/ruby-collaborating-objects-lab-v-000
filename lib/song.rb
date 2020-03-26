@@ -23,6 +23,5 @@ class Song
     genre_s = parts[2].gsub(".mp3","")
 
     self.new(song_name).tap {|song| song.artist = artist_name}
-    binding.pry
   end
 end
