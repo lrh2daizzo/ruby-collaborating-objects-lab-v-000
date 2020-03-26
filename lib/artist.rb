@@ -9,7 +9,7 @@ class Artist
   def add_song(song)
     song.artist = self
   end
-  
+
   def songs
     Song.all.select {|song| song.artist == self}
   end
@@ -17,4 +17,9 @@ class Artist
   def save
     @@all << self
   end
+
+  def self.all
+    @@all
+  end
+  
 end
